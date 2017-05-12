@@ -21,8 +21,7 @@ def writeFile(path,content):
 #//
 ##NSLog
 def shouldIgnore(string):
-	regs = ['DKImageWithNames',
-	'^[ ]*//[ ]*',
+	regs = ['^[ ]*//[ ]*',
 	'^[ ]*NSLog\(@\"[ ]*'];
 	for reg in regs:
 		if re.search(reg,string):
@@ -37,7 +36,7 @@ def shouldIgnore(string):
 	return False;
 
 #判断是否已经处理过了，为true则需要处理，为false则已经处理过了
-def haveReplace(string):
+def shouldHandle(string):
 	regs = ['NSLocalizedString[ ]*\([ ]*$',
 	'NSLocalizedStringWithDefaultValue[ ]*\([ ]*$',
 	'NSLocalizedStringFromTable[ ]*\([ ]*$',
@@ -59,7 +58,7 @@ def handleString(string,comment):
 		stringMiddle = result.group(0);
 		stringHK = openCC.convert(stringMiddle)
 		stringResult = str();
-		if haveReplace(stringBefore):
+		if shouldHandle(stringBefore):
 			stringReplace = "STTLocalizedString(%s)"%(stringHK);
 			stringResult = stringBefore+stringReplace+stringAfter;
 			addToLocalizable(stringHK,stringMiddle);
