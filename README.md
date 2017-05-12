@@ -1,5 +1,5 @@
 # TranslateFiles
-适用于 iOS 的国际化，也可扩展延伸。扫描文件夹下的文件，将简体转换为繁体，生成转换日志、strings文件以及需要手动转换的日志。
+适用于 iOS 的国际化，也可扩展延伸。扫描文件夹下的文件，将简体转换为繁体，生成转换日志、 strings 文件以及需要手动转换的日志。字体转换库使用的 [opencc-python](https://github.com/yichen0831/opencc-python) ，感谢 [opencc-python](https://github.com/yichen0831/opencc-python) ，如需其它转换方式请自行查文档。
 # translate.py
 在 translate.py 里设置文件夹路径和日志路径。这个文件会扫描需要翻译的文件，目前的规则是扫描 **.h** 文件和 **.m** 文件，如需扫描其它文件，请自行处理。
 
@@ -38,6 +38,7 @@ python3.5 translate.py
 ```
 
 6. 希望能帮助到有需要的人。
+
 
 
 
