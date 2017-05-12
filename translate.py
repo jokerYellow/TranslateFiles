@@ -4,8 +4,8 @@ import os
 import os.path
 
 now = datetime.datetime.now()
-recordPath = '/Users/pipasese/Desktop/record'+now.strftime('%Y-%m-%d %H:%M:%S')
-projPath = "/Users/pipasese/Documents/code/gaoxin/Normal/toutiao_ios/Class"
+recordPath = '/Users/XXX/Desktop/record'+now.strftime('%Y-%m-%d %H:%M:%S')
+projPath = "/Users/XXX/files"
 files = 0;
 replaceTimes = 0;
 
